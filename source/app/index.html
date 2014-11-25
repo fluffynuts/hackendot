@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hackendot</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="favicon.ico?v=2" />
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <!-- build:css styles/components/main.min.css -->
+    <link rel="stylesheet" href="styles/h5bp.css">
+    <link rel="stylesheet" href="styles/components/components.css">
+    <link rel="stylesheet" href="styles/main.css">  
+    <!-- endbuild -->
+  </head>
+  <body style="background-color: black">
+    <div id="splash">
+        Loading...
+    </div>
+    <div id="content" style="display: none;">
+        <header class="app-bar promote-layer">
+            <div class="app-bar-container">
+                <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
+                    <h1 class="logo">Hackendot<slashd/h1>
+                            <section class="app-bar-actions">
+                                <!-- Put App Bar Buttons Here -->
+                            </section>
+                        </div>
+                    </header>
+
+                    <nav class="navdrawer-container promote-layer">
+                        <h4>Navigation</h4>
+                        <ul class="top">
+                            <li><span data-category="slashdot">Main</a></li>
+                        </ul>
+                        <ul class="bottom">
+                            <li>
+                                <div class="right">
+                                    <img id="preferences" src="images/gear.png" style="width: 32px; height: 32px"/>
+                                </div>
+                                <div class="left"> 
+                                    <img id="donatePaypal" src="images/paypal.gif" />
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div id="options" style="display: none;">
+                        <div class="row">
+                            <div class="leftColWrapper">
+                                <div class="leftCol">
+                                    <fieldset>
+                                        <legend>Theme</legend>
+                                            <div data-theme="light" class="unchecked">Light</div>
+                                            <div data-theme="dark" class="unchecked">Dark</div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="leftColWrapper">
+                                <div class="leftCol">
+                                    <fieldset>
+                                        <legend>Font size</legend>
+                                            <div data-font-size="normal" class="unchecked">Normal</div>
+                                            <div data-font-size="large" class="unchecked">Larger</div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="leftColWrapper">
+                                <div class="leftCol">
+                                    <fieldset>
+                                        <legend>Default feed</legend>
+                                        <div id="defaultFeedOptions">
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="leftColWrapper">
+                                <div class="leftCol">
+                                    <fieldset>
+                                        <legend>Load options</legend>
+                                        <div data-load-method="lighter" class="unchecked">Lighter</div>
+                                        <div data-load-method="richer" class="unchecked">Richer</div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="leftCol">
+                                <button id="done">Done</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="topSpacer"></div>
+                    <main>
+                    </main>
+                </div>
+    <!-- build:js scripts/main.min.js -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/jquery.easypinch.js"></script>
+    <script type="text/javascript" src="lib/jquery.pullToRefresh.js"></script>
+    <script type="text/javascript" src="scripts/001_WebHelper.js"></script>
+    <script type="text/javascript" src="scripts/002_PrefsHelper.js"></script>
+    <script type="text/javascript" src="scripts/003_AtomLoader.js"></script>
+    <script type="text/javascript" src="scripts/004_XmlHelper.js"></script>
+    <script type="text/javascript" src="scripts/005_RedirectHelper.js"></script>
+    <script type="text/javascript" src="scripts/997_donate.js"></script>
+    <script type="text/javascript" src="scripts/998_app.js"></script>
+    <script type="text/javascript" src="scripts/999_main.js"></script>
+    <!-- endbuild -->
+    <!-- Built with love using Web Starter Kit -->
+<script type="text/javascript">
+</script>
+  </body>
+</html>

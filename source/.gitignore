@@ -1,0 +1,7 @@
+node_modules
+.sass-cache
+dist
+.tmp
+test-results.xml
+*.swp
+*.swo
