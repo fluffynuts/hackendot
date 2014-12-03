@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup Label="ProjectConfigurations">
+        <ProjectConfiguration Include="Debug|AnyCPU">
+            <Configuration>Debug</Configuration>
+            <Platform>AnyCPU</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Debug|ARM">
+            <Configuration>Debug</Configuration>
+            <Platform>ARM</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Debug|x64">
+            <Configuration>Debug</Configuration>
+            <Platform>x64</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Debug|x86">
+            <Configuration>Debug</Configuration>
+            <Platform>x86</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Release|AnyCPU">
+            <Configuration>Release</Configuration>
+            <Platform>AnyCPU</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Release|ARM">
+            <Configuration>Release</Configuration>
+            <Platform>ARM</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Release|x64">
+            <Configuration>Release</Configuration>
+            <Platform>x64</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Release|x86">
+            <Configuration>Release</Configuration>
+            <Platform>x86</Platform>
+        </ProjectConfiguration>
+    </ItemGroup>
+    <PropertyGroup Label="Globals">
+        <ProjectGuid>efffab2f-bfc5-4eda-b545-45ef4995f55a</ProjectGuid>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">
+        <VisualStudioVersion>11.0</VisualStudioVersion>
+    </PropertyGroup>
+    <Import Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+    <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).Default.props" />
+    <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).props" />
+    <PropertyGroup>
+        <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+        <TargetPlatformVersion>8.0</TargetPlatformVersion>
+        <DefaultLanguage>en-US</DefaultLanguage>
+        <PackageCertificateKeyFile>CordovaApp_TemporaryKey.pfx</PackageCertificateKeyFile>
+    </PropertyGroup>
+    <ItemGroup>
+        <AppxManifest Include="package.appxmanifest">
+            <SubType>Designer</SubType>
+        </AppxManifest>
+        <Content Include="images\logo.png" />
+        <Content Include="images\smalllogo.png" />
+        <Content Include="images\splashscreen.png" />
+        <Content Include="images\storelogo.png" />
+        <None Include="CordovaApp_TemporaryKey.pfx" />
+    </ItemGroup>
+    <ItemGroup>
+        <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
+    <PropertyGroup>
+        <PreBuildEvent>
+Powershell -ExecutionPolicy RemoteSigned Unblock-File '$(ProjectDir)\cordova\lib\ApplyPlatformConfig.ps1'; Powershell -File '$(ProjectDir)\cordova\lib\ApplyPlatformConfig.ps1' '$(ProjectDir)\';
+    </PreBuildEvent>
+        <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    </PropertyGroup>
+    <ItemGroup>
+        <Content Include="www\apple-touch-icon-precomposed.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\cordova.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\cordova_plugins.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\favicon.ico" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Bold.eot" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Bold.ttf" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Bold.woff" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-BoldItalic.eot" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-BoldItalic.ttf" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-BoldItalic.woff" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Italic.eot" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Italic.ttf" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Italic.woff" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Light.eot" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Light.ttf" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Light.woff" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-LightItalic.eot" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-LightItalic.ttf" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-LightItalic.woff" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Regular.eot" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Regular.ttf" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Regular.woff" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\humans.txt" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\checked.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\facebook.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\gear.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\googleplus.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\hamburger.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\icons-hinted.ttf" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\icons.eot" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\icons.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\icons.ttf" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\icons.woff" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\icons.woff2" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\placeholder--medium.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\placeholder--small.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\placeholder--wide.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\paypal.gif" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\touch\chrome-touch-icon-196x196.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\touch\icon-128x128.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\touch\ms-touch-icon-144x144-precomposed.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\twitter.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\unchecked.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\index.html" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\manifest.webapp" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\com.borismus.webintent\www\webintent.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\me.apla.cordova.app-preferences\src\windows8\platform.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\me.apla.cordova.app-preferences\www\apppreferences.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\res\icons\android\icon-36-ldpi.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\res\icons\android\icon-48-mdpi.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\res\icons\android\icon-72-hdpi.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\res\icons\android\icon-96-xhdpi.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\res\icons\windows8\logo.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\res\icons\windows8\smalllogo.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\res\icons\windows8\storelogo.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\robots.txt" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\scripts\main.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\styleguide\index.html" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\styles\components\main.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\task\AppPreferences.js" />
+    </ItemGroup>
+</Project>

@@ -1,0 +1,25 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.borismus.webintent": {
+            "PACKAGE_NAME": "{5B991171-D11E-4210-95CC-CFEF32D1E8C4}"
+        },
+        "org.chromium.socket": {
+            "PACKAGE_NAME": "{5B991171-D11E-4210-95CC-CFEF32D1E8C4}"
+        },
+        "com.tlantic.plugins.socket": {
+            "PACKAGE_NAME": "{5B991171-D11E-4210-95CC-CFEF32D1E8C4}"
+        }
+    },
+    "dependent_plugins": {
+        "org.chromium.common": {
+            "PACKAGE_NAME": "{5B991171-D11E-4210-95CC-CFEF32D1E8C4}"
+        }
+    }
+}

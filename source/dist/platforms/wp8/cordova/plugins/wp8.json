@@ -1,0 +1,26 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"AppPreferences\"><param name=\"wp-package\" value=\"AppPreferences\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "me.apla.cordova.app-preferences": {
+            "PACKAGE_NAME": "{5B991171-D11E-4210-95CC-CFEF32D1E8C4}"
+        }
+    },
+    "dependent_plugins": {}
+}

@@ -1,6 +1,13 @@
 node_modules
 .sass-cache
-dist
+dist/www
+dist/platforms/android/ant-build
+dist/platforms/android/ant-gen
+dist/platforms/windows8/apppackages
+dist/platforms/windows8/bin
+dist/platforms/windows8/bld
+dist/platforms/wp8/Bin
+dist/platforms/wp8/obj
 .tmp
 test-results.xml
 *.swp

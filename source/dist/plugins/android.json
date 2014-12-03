@@ -1,0 +1,56 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"WebIntent\"><param name=\"android-package\" value=\"com.borismus.webintent.WebIntent\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Socket\"><param name=\"android-package\" value=\"com.tlantic.plugins.socket.SocketPlugin\" /></feature>",
+                            "count": 1
+                        }
+                    ],
+                    "/widget": [
+                        {
+                            "xml": "<feature name=\"ChromeSocket\"><param name=\"android-package\" value=\"org.chromium.ChromeSocket\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.borismus.webintent": {
+            "PACKAGE_NAME": "com.hackendot"
+        },
+        "org.chromium.socket": {
+            "PACKAGE_NAME": "com.hackendot"
+        },
+        "com.tlantic.plugins.socket": {
+            "PACKAGE_NAME": "com.hackendot"
+        }
+    },
+    "dependent_plugins": {
+        "org.chromium.common": {
+            "PACKAGE_NAME": "com.hackendot"
+        }
+    }
+}

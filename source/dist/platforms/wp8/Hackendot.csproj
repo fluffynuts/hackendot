@@ -1,0 +1,366 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProductVersion>10.0.20506</ProductVersion>
+        <SchemaVersion>2.0</SchemaVersion>
+        <ProjectGuid>{3677C1B7-D68B-4CF9-BF8A-E869D437A6DF}</ProjectGuid>
+        <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>com.hackendot</RootNamespace>
+        <AssemblyName>com.hackendot</AssemblyName>
+        <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+        <SilverlightVersion>
+        </SilverlightVersion>
+        <TargetFrameworkProfile>
+        </TargetFrameworkProfile>
+        <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+        <SilverlightApplication>true</SilverlightApplication>
+        <SupportedCultures>en-US</SupportedCultures>
+        <XapOutputs>true</XapOutputs>
+        <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+        <XapFilename>CordovaAppProj_$(Configuration)_$(Platform).xap</XapFilename>
+        <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+        <SilverlightAppEntry>com.hackendot.App</SilverlightAppEntry>
+        <ValidateXaml>true</ValidateXaml>
+        <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+        <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+        <BackgroundAgentType />
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>Bin\Debug</OutputPath>
+        <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;WP8</DefineConstants>
+        <NoStdLib>true</NoStdLib>
+        <NoConfig>true</NoConfig>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <Prefer32Bit>false</Prefer32Bit>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>Bin\Release</OutputPath>
+        <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;WP8</DefineConstants>
+        <NoStdLib>true</NoStdLib>
+        <NoConfig>true</NoConfig>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <Prefer32Bit>false</Prefer32Bit>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+        <DebugSymbols>true</DebugSymbols>
+        <OutputPath>Bin\x86\Debug</OutputPath>
+        <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+        <NoStdLib>true</NoStdLib>
+        <DebugType>full</DebugType>
+        <PlatformTarget>
+        </PlatformTarget>
+        <ErrorReport>prompt</ErrorReport>
+        <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+        <Optimize>false</Optimize>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+        <OutputPath>Bin\x86\Release</OutputPath>
+        <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+        <Optimize>true</Optimize>
+        <NoStdLib>true</NoStdLib>
+        <DebugType>pdbonly</DebugType>
+        <PlatformTarget>
+        </PlatformTarget>
+        <ErrorReport>prompt</ErrorReport>
+        <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+        <Prefer32Bit>false</Prefer32Bit>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+        <DebugSymbols>true</DebugSymbols>
+        <OutputPath>Bin\ARM\Debug</OutputPath>
+        <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+        <NoStdLib>true</NoStdLib>
+        <DebugType>full</DebugType>
+        <PlatformTarget>
+        </PlatformTarget>
+        <ErrorReport>prompt</ErrorReport>
+        <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+        <Prefer32Bit>false</Prefer32Bit>
+        <Optimize>false</Optimize>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+        <OutputPath>Bin\ARM\Release</OutputPath>
+        <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+        <Optimize>true</Optimize>
+        <NoStdLib>true</NoStdLib>
+        <DebugType>pdbonly</DebugType>
+        <PlatformTarget>
+        </PlatformTarget>
+        <ErrorReport>prompt</ErrorReport>
+        <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+        <Prefer32Bit>false</Prefer32Bit>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Include="App.xaml.cs">
+            <DependentUpon>App.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="cordovalib\Commands\BaseCommand.cs" />
+        <Compile Include="cordovalib\JSON\JsonHelper.cs" />
+        <Compile Include="cordovalib\BrowserMouseHelper.cs" />
+        <Compile Include="cordovalib\CommandFactory.cs" />
+        <Compile Include="cordovalib\ConfigHandler.cs" />
+        <Compile Include="cordovalib\ConsoleHelper.cs" />
+        <Compile Include="cordovalib\CordovaCommandCall.cs" />
+        <Compile Include="cordovalib\CordovaView.xaml.cs">
+            <DependentUpon>CordovaView.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="cordovalib\IBrowserDecorator.cs" />
+        <Compile Include="cordovalib\ImageExifHelper.cs" />
+        <Compile Include="cordovalib\MimeTypeMapper.cs" />
+        <Compile Include="cordovalib\NativeExecution.cs" />
+        <Compile Include="cordovalib\OrientationHelper.cs" />
+        <Compile Include="cordovalib\PluginResult.cs" />
+        <Compile Include="cordovalib\ScriptCallback.cs" />
+        <Compile Include="cordovalib\XHRHelper.cs" />
+        <Compile Include="MainPage.xaml.cs">
+            <DependentUpon>MainPage.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <ApplicationDefinition Include="App.xaml">
+            <SubType>Designer</SubType>
+            <Generator>MSBuild:Compile</Generator>
+        </ApplicationDefinition>
+        <Page Include="cordovalib\CordovaView.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Include="MainPage.xaml">
+            <SubType>Designer</SubType>
+            <Generator>MSBuild:Compile</Generator>
+        </Page>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="config.xml" />
+        <Content Include="Images\appbar.back.rest.png" />
+        <Content Include="Images\appbar.close.rest.png" />
+        <Content Include="Images\appbar.feature.video.rest.png" />
+        <Content Include="Images\appbar.next.rest.png" />
+        <Content Include="Images\appbar.save.rest.png" />
+        <Content Include="Images\appbar.stop.rest.png" />
+        <None Include="cordova\lib\build.js" />
+        <None Include="cordova\lib\clean.js" />
+        <None Include="cordova\lib\deploy.js" />
+        <None Include="cordova\lib\log.js" />
+        <None Include="cordova\lib\target-list.js" />
+        <None Include="cordova\build.bat" />
+        <None Include="cordova\clean.bat" />
+        <None Include="cordova\lib\install-device.bat" />
+        <None Include="cordova\lib\install-emulator.bat" />
+        <None Include="cordova\lib\list-devices.bat" />
+        <None Include="cordova\lib\list-emulator-images.bat" />
+        <None Include="cordova\lib\list-started-emulators.bat" />
+        <None Include="cordova\lib\start-emulator.bat" />
+        <None Include="cordova\log.bat" />
+        <None Include="cordova\run.bat" />
+        <None Include="cordova\version.bat" />
+        <None Include="VERSION" />
+        <None Include="Properties\AppManifest.xml">
+            <SubType>Designer</SubType>
+        </None>
+        <None Include="Properties\WMAppManifest.xml">
+            <SubType>Designer</SubType>
+        </None>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="ApplicationIcon.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Background.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="SplashScreenImage.jpg" />
+    </ItemGroup>
+    <ItemGroup>
+        <WCFMetadata Include="Service References\" />
+    </ItemGroup>
+    <ItemGroup>
+        <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+    <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+    <ProjectExtensions />
+    <PropertyGroup>
+    </PropertyGroup>
+    <PropertyGroup>
+        <PostBuildEvent>
+        </PostBuildEvent>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Include="Plugins\me.apla.cordova.app-preferences\AppPreferences.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\apple-touch-icon-precomposed.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\cordova.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\cordova_plugins.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\favicon.ico" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Bold.eot" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Bold.ttf" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Bold.woff" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-BoldItalic.eot" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-BoldItalic.ttf" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-BoldItalic.woff" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Italic.eot" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Italic.ttf" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Italic.woff" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Light.eot" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Light.ttf" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Light.woff" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-LightItalic.eot" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-LightItalic.ttf" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-LightItalic.woff" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Regular.eot" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Regular.ttf" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\fonts\RobotoCondensed-Regular.woff" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\humans.txt" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\checked.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\facebook.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\gear.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\googleplus.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\hamburger.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\icons-hinted.ttf" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\icons.eot" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\icons.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\icons.ttf" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\icons.woff" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\icons.woff2" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\placeholder--medium.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\placeholder--small.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\icons\placeholder--wide.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\paypal.gif" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\touch\chrome-touch-icon-196x196.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\touch\icon-128x128.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\touch\ms-touch-icon-144x144-precomposed.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\twitter.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\unchecked.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\index.html" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\manifest.webapp" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\com.borismus.webintent\www\webintent.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\res\icons\android\icon-36-ldpi.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\res\icons\android\icon-48-mdpi.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\res\icons\android\icon-72-hdpi.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\res\icons\android\icon-96-xhdpi.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\robots.txt" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\scripts\main.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\styleguide\index.html" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\styles\components\main.min.css" />
+    </ItemGroup>
+</Project>

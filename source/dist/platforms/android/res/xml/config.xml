@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.hackendot" version="1.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="AndroidLaunchMode" value="singleTop" />
+    <feature name="App">
+        <param name="android-package" value="org.apache.cordova.App" />
+    </feature>
+    <feature name="WebIntent">
+        <param name="android-package" value="com.borismus.webintent.WebIntent" />
+    </feature>
+    <feature name="Socket">
+        <param name="android-package" value="com.tlantic.plugins.socket.SocketPlugin" />
+    </feature>
+    <feature name="ChromeSocket">
+        <param name="android-package" value="org.chromium.ChromeSocket" />
+    </feature>
+    <icon src="www/res/icons/android/icon-36-ldpi.png" />
+    <icon density="ldpi" platform="android" src="www/res/icons/android/icon-36-ldpi.png" />
+    <icon density="mdpi" platform="android" src="www/res/icons/android/icon-48-mdpi.png" />
+    <icon density="hdpi" platform="android" src="www/res/icons/android/icon-72-hdpi.png" />
+    <icon density="xhdpi" platform="android" src="www/res/icons/android/icon-96-xhdpi.png" />
+    <name>Hackendot</name>
+    <description>
+        A minimalistic Slashdot RSS reader.
+    </description>
+    <author email="davydm@gmail.com" href="http://github.com/fluffynuts">
+        Davyd McColl
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>

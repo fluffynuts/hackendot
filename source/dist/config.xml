@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.hackendot" version="1.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Hackendot</name>
+    <description>
+        A minimalistic Slashdot RSS reader.
+    </description>
+    <author email="davydm@gmail.com" href="http://github.com/fluffynuts">
+        Davyd McColl
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <platform name="android">
+        <icon src="www/res/icons/android/icon-36-ldpi.png" />
+        <icon src="www/res/icons/android/icon-36-ldpi.png" platform="android" density="ldpi" />
+        <icon src="www/res/icons/android/icon-48-mdpi.png" platform="android" density="mdpi" />
+        <icon src="www/res/icons/android/icon-72-hdpi.png" platform="android" density="hdpi" />
+        <icon src="www/res/icons/android/icon-96-xhdpi.png" platform="android" density="xhdpi" />
+    </platform>
+    <platform name="windows8">
+        <icon src="www/res/icons/windows8/logo.png" width="150" height="150" />
+        <icon src="www/res/icons/windows8/smalllogo.png" width="30" height="30" />
+        <icon src="www/res/icons/windows8/storelogo.png" width="50" height="50" />
+    </platform>
+</widget>
