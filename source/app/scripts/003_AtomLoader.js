@@ -218,25 +218,35 @@ var Hackendot = Hackendot || {};
             var a = $("<a></a>");
             a.attr("href", "#");
             a.text(text);
-            a.on("click", function() {
-                webHelper.openUrl(url);
+            var self = this;
+            a.on("click", function(ev) {
+                ev.preventDefault();
+                self._openExternally(url);
             });
             return a;
         },
         convertLinksToExternalOpen: function(ctx) {
+            var self = this;
             $(ctx).find("a").each(function(idx, item) {
                 item = $(item);
                 var url = item.attr("href");
                 item.attr("href", "#");
                 item.attr("data-original-url", url);
                 item.removeAttr("onclick");
-                item.on("click", function() {
-                    webHelper.openUrl(url);
-                    return false;
+                item.on("click", function(ev) {
+                    ev.preventDefault();
+                    self._openExternally(url);
                 });
             });
             return $(ctx);
         },
+        _openExternally: function(url) {
+            var scrollTop = $('body').scrollTop();
+            webHelper.openUrl(url);
+            window.setTimeout(function() {
+                $('body').scrollTop(scrollTop);
+            }, 10);
+        }
     };
     AtomLoader.bindClick = function(navItem, target, onSuccess, onFail) {
         var feedUrl = $(navItem).attr("data-feed-url");
