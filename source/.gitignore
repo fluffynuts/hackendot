@@ -1,8 +1,8 @@
 node_modules
 .sass-cache
 dist/www
-dist/platforms/android/ant-build
-dist/platforms/android/ant-gen
+dist/platforms/android
+dist/platforms/android
 dist/platforms/windows8/apppackages
 dist/platforms/windows8/bin
 dist/platforms/windows8/bld
